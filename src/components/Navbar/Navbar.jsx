@@ -8,6 +8,7 @@ const Navbar = () => {
     const headerRef = useRef();
 
     const [top, setTop] = useState(true);
+    const [showNav, setShowNav] = useState(false)
 
     useEffect(() => {
       const scrollHandler = () => {
@@ -17,12 +18,31 @@ const Navbar = () => {
     
     // Explicit call so that the navbar gets blurred when component mounts 
     scrollHandler(); 
+
+
     
     return () => {
         window.removeEventListener('scroll', scrollHandler);
     }
 
     }, [top]);
+
+
+    useEffect(() => {
+      setTimeout(() => {
+        setShowNav(true);
+       // navRef.current.classList.toggle("navLoad");
+      }, 2000);
+     
+      
+    }, []);
+    useEffect(() => {
+      if(showNav){
+
+      navRef.current.classList.toggle("navLoad");
+      }
+      
+    }, [showNav])
 
     console.log(top, "settop")
     const showNavbar = () => {
@@ -37,76 +57,110 @@ const Navbar = () => {
    <header className={top ? "header" :  "header blurry"} ref={headerRef}>
     <div className='slayBanner'>
       <div className='slaySlide'>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
       </div>
       <div className='slaySlide'>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
-<span>Slay</span>
+<span>slay bitch</span>
 <span>★</span>
       </div>
     </div>
     <div className="navContainer">
    <Link className="logoWrapper"  spy={true} smooth={true} offset={0} duration={500} to="apufrens"> <img src="/images/logo.png" className="logo"  /> <span className="logoText"></span></Link>
    <nav className='navbar' ref={navRef}>
-   <motion.ul
-      initial={{ x: 250 }}
-      animate={{ x: 0 }}
-      transition={{ type: 'spring', stiffness:200, duration: 0.5 }} >
-    <li className="strong-hover-shake"><Link activeClass="active" className="page-scroll navLinks" offset={0} spy={true} smooth={true} style={{'--i':0}} duration={500} to="apufrens">home</Link></li>
-    <li className="strong-hover-shake"><Link activeClass="active" className="page-scroll navLinks" offset={-120} spy={true} smooth={true} style={{'--i':0}} duration={500} to="about">about</Link></li>
-    <li className="strong-hover-shake"><Link activeClass="active" className="page-scroll navLinks" offset={-80} spy={true} smooth={true} style={{'--i':0}} duration={500} to="howtobuy">how to buy</Link></li>
+   <motion.ul>
+    <motion.li  animate={{
+                scaleX: [1, 0.8, 1],
+                scaleY: [1, 1.2, 1],
+                transition: {
+                   duration: 1,
+                   ease: "easeInOut",
+
+                   delay: 0
+                }
+            }}  className="strong-hover-shake"><Link activeClass="active" className="page-scroll navLinks" offset={0} spy={true} smooth={true} style={{'--i':0}} duration={500} to="home">home</Link></motion.li>
+    <motion.li  animate={{
+                scaleX: [1, 0.8, 1],
+                scaleY: [1, 1.2, 1],
+                transition: {
+                   duration: 1,
+                   ease: "easeInOut",
+
+                   delay: 0
+                }
+            }} className="strong-hover-shake"><Link activeClass="active" className="page-scroll navLinks" offset={0} spy={true} smooth={true} style={{'--i':0}} duration={500} to="about">about</Link></motion.li>
+    <motion.li   animate={{
+                scaleX: [1, 0.8, 1],
+                scaleY: [1, 1.2, 1],
+                transition: {
+                   duration: 1,
+                   ease: "easeInOut",
+
+                   delay: 0
+                }
+            }} className="strong-hover-shake"><Link activeClass="active" className="page-scroll navLinks" offset={-80} spy={true} smooth={true} style={{'--i':0}} duration={500} to="howtobuy">how to buy</Link></motion.li>
+       <motion.li   animate={{
+                scaleX: [1, 0.8, 1],
+                scaleY: [1, 1.2, 1],
+                transition: {
+                   duration: 1,
+                   ease: "easeInOut",
+
+                   delay: 0
+                }
+            }} className="strong-hover-shake"><Link activeClass="active" className="page-scroll navLinks" offset={0} spy={true} smooth={true} style={{'--i':0}} duration={500} to="tokenomics">tokenomics</Link></motion.li>
    
    </motion.ul>
    <ul className='navSocials'>

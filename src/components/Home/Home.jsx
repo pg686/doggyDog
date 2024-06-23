@@ -17,11 +17,12 @@ const Home = ({wagmi, toggleWagmi}) => {
             y: [0, -30, 0]      
           }}
           transition={{
-            duration: 3,       
+            duration: 5,       
             ease: "easeInOut",   
             repeat: Infinity,   
             repeatDelay: 0        
           }}>born to $slay</motion.h2>
+ 
           </div>
         <div className='wojakSection'>
          <motion.span className="homeImgSpan"  

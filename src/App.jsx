@@ -3,6 +3,7 @@ import Navbar from './components/Navbar/Navbar.jsx';
 import Home from './components/Home/Home.jsx';
 import About from './components/About/About.jsx';
 import Memes from './components/Memes/Memes.jsx';
+import Tokenomics from './components/Tokenomics/Tokenomics.jsx';
 import {useRef, useState, useEffect } from 'react';
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
     <About />
     <Memes />
     <Memes />
+<Tokenomics />
     </div>
     </div>
     </div>

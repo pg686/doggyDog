@@ -55,11 +55,14 @@ header .nav-btn {
     display: none;
     opacity: 0;
 }
+
 nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
+
 @media (max-width: 1100px) {
     header .nav-btn {
         display: block;
@@ -151,8 +154,8 @@ nav ul li {
 }
 
 .navLinks.active {
-    font-size: 22px;
-    color: var(--theme-light);
+    transform: scale(1.25);
+    color: plum;
     transition: 0.5s ease-out;
 }
 
@@ -208,7 +211,7 @@ nav ul li {
 
 .slaySlide {
     display: inline-block;
-    animation: 10s slide infinite linear;
+    animation: 20s slide infinite linear;
 }
 
 .slaySlide span {

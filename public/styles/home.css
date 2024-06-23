@@ -41,13 +41,13 @@
 }
 .homeContainer {
      padding-top: 8rem;
-     padding-bottom: 5rem;
 }
 
 .about{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 5rem;
     
 }
 .App {
