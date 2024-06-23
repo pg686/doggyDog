@@ -1,0 +1,50 @@
+.aboutSection {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    border: 2px solid white;
+    border-radius: 30px;
+}
+.aboutSection h2 {
+    margin-top: 10px;
+}
+.aboutContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (max-width: 1100px) {
+    .aboutContent {
+flex-direction: column;
+    }
+    .aboutContent {
+        padding: 0 5px;
+    }
+}
+.aboutContainer {
+
+    display: flex;
+}
+.aboutInfo{
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    word-break: break-all;
+    justify-content: space-between;
+}
+.tweetPost {
+ padding: 1rem;
+ flex: 1;
+  height: auto;
+ display: flex;
+}
+
+.aboutWrapper{
+    display: flex;
+    flex-direction: column;
+}
