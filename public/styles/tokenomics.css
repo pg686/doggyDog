@@ -8,11 +8,17 @@
 
  .tokenomicsItems {
     display: flex;
-    flex-direction: row !important;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
     flex: 1 1 auto;
+}
+@media (max-width: 600px) {
+
+    .tokenomicsItems {
+        flex-direction: column;
+    }
 }
 
 .tokenomicsImg {
