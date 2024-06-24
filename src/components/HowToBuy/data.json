@@ -14,13 +14,13 @@
     , {
         "title": "Go to Jupiter or Raydium",
         "svg": "jupiter.svg",
-        "description": "Using Google Chrome or the browser within the Phantom Wallet app, navigate to Jup.ag (Jupiter) and connect to your wallet. Copy the $APU token address, choose $APU, and hit the confirm button in Jupiter"
+        "description": "Using Google Chrome or the browser within the Phantom Wallet app, navigate to Jup.ag (Jupiter) and connect to your wallet. Copy the $XXX token address, choose $XXX, and hit the confirm button in Jupiter"
     }
     , {
         "title": "Swap",
         "svg": "swap.svg",
-        "description": "Swap your SOL for $APU and come vibe with frens",
-        "hidden": "navigate to Jup.ag (Jupiter) and connect to your wallet. Copy the $APU token address, choose $APU, and hit the confirm button in Jupiter"
+        "description": "Swap your SOL for $XXX and come vibe with frens",
+        "hidden": "navigate to Jup.ag (Jupiter) and connect to your wallet. Copy the $XXX token address, choose $XXX, and hit the confirm button in Jupiter"
     }
 
 ]

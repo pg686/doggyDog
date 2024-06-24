@@ -12,7 +12,7 @@ const Navbar = () => {
 
     useEffect(() => {
       const scrollHandler = () => {
-        setTop(window.pageYOffset <= 50)
+        setTop(window.pageYOffset <= 50 || window.innerWidth <= 1100)
     };
     window.addEventListener('scroll', scrollHandler);
     
@@ -118,7 +118,7 @@ const Navbar = () => {
       </div>
     </div>
     <div className="navContainer">
-   <Link className="logoWrapper"  spy={true} smooth={true} offset={0} duration={500} to="apufrens"> <img src="/images/logo.png" className="logo"  /> <span className="logoText"></span></Link>
+   <Link className="logoWrapper"  spy={true} smooth={true} offset={0} duration={500} to="home"> <img src="/images/logo.png" className="logo"  /> <span className="logoText"></span></Link>
    <nav className='navbar' ref={navRef}>
    <motion.ul>
     <motion.li  animate={{
@@ -140,7 +140,7 @@ const Navbar = () => {
 
                    delay: 0
                 }
-            }} className="strong-hover-shake"><Link activeClass="active" className="page-scroll navLinks" offset={-50} spy={true} smooth={true} style={{'--i':0}} duration={500} to="about">about</Link></motion.li>
+            }} className="strong-hover-shake"><Link activeClass="active" className="page-scroll navLinks" offset={0} spy={true} smooth={true} style={{'--i':0}} duration={500} to="about">about</Link></motion.li>
     <motion.li   animate={{
                 scaleX: [1, 0.8, 1],
                 scaleY: [1, 1.2, 1],
