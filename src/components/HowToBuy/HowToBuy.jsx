@@ -9,7 +9,7 @@ const evenButtonVariant = {
       opacity: 1, 
       x: 0,       
       transition: {
-          type: 'spring', stiffness: 200, duration: 10
+          type: 'spring', stiffness: 100, duration: 3
       },
 
 
@@ -22,7 +22,7 @@ const evenButtonVariant = {
               scale: 1.03,
               boxShadow: "0px 0px 8px rgb(255, 255, 255)",
               transition: {
-                  type: 'spring', stiffness: 200, duration: 1
+                  type: 'spring', stiffness: 100, duration: 3
                   
   }
   }
@@ -34,7 +34,7 @@ const oddButtonVariant =  {
       opacity: 1,
       x: 0,        
       transition: {
-          type: 'spring', stiffness: 200, duration: 1
+          type: 'spring', stiffness: 100, duration: 3
       }
   },
   hover: {
@@ -83,7 +83,6 @@ const HowToBuy = () => {
                         description={item.description}
                         img={ item.svg }
                         hidden={item.hidden }/>)
-                        
                 })}
         </div>
       </div>

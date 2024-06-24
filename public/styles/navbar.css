@@ -42,7 +42,7 @@ header {
     left: 100%;
 }
 .navLinks:hover {
-    color: #FFC72C;
+    color: plum;
     transition: 0.5s ease-out;
 }
 header .nav-btn {

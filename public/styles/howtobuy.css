@@ -10,12 +10,7 @@
     border: 2px solid white;
     border-radius: 20px;
 }
-.howToBuyItems:nth-child(1),
-.howToBuyItems:nth-child(3){
-    left: -40px;
-    background-color: red;
-    position: relative;
-}
+
 .howToBuyWrapper {
     padding-right: 12%;
     padding-left: 12%;

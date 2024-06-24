@@ -140,7 +140,7 @@ const Navbar = () => {
 
                    delay: 0
                 }
-            }} className="strong-hover-shake"><Link activeClass="active" className="page-scroll navLinks" offset={0} spy={true} smooth={true} style={{'--i':0}} duration={500} to="about">about</Link></motion.li>
+            }} className="strong-hover-shake"><Link activeClass="active" className="page-scroll navLinks" offset={-50} spy={true} smooth={true} style={{'--i':0}} duration={500} to="about">about</Link></motion.li>
     <motion.li   animate={{
                 scaleX: [1, 0.8, 1],
                 scaleY: [1, 1.2, 1],
@@ -160,7 +160,7 @@ const Navbar = () => {
 
                    delay: 0
                 }
-            }} className="strong-hover-shake"><Link activeClass="active" className="page-scroll navLinks" offset={0} spy={true} smooth={true} style={{'--i':0}} duration={500} to="tokenomics">tokenomics</Link></motion.li>
+            }} className="strong-hover-shake"><Link activeClass="active" className="page-scroll navLinks" offset={-80} spy={true} smooth={true} style={{'--i':0}} duration={500} to="tokenomics">tokenomics</Link></motion.li>
    
    </motion.ul>
    <ul className='navSocials'>
@@ -179,7 +179,7 @@ const Navbar = () => {
  
    </nav>
    <div className="buyWagmi">
-   <a href="https://jup.ag/swap/SOL-ECutGg12PNhqhkvnH1s1FcuXgCDzKDNhSf5aLtANioR7" className="button">Buy WAGMI</a>
+   <a href="https://jup.ag/swap/SOL-ECutGg12PNhqhkvnH1s1FcuXgCDzKDNhSf5aLtANioR7" className="button">Buy $SLAY</a>
 
    <button className='nav-btn' onClick={showNavbar}>
    <FaBars />
