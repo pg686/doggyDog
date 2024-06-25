@@ -16,7 +16,6 @@ const Navbar = () => {
     };
     window.addEventListener('scroll', scrollHandler);
     
-    // Explicit call so that the navbar gets blurred when component mounts 
     scrollHandler(); 
 
 
@@ -31,7 +30,6 @@ const Navbar = () => {
     useEffect(() => {
       setTimeout(() => {
         setShowNav(true);
-       // navRef.current.classList.toggle("navLoad");
       }, 2000);
      
       
@@ -46,13 +44,21 @@ const Navbar = () => {
 
     console.log(top, "settop")
     const showNavbar = () => {
-        navRef.current.classList.toggle("responsive_nav");
-
-            headerRef.current.classList.toggle("responsive-style");
-
-     
-
+        navRef.current.classList.toggle("responsive_nav");    
     }
+
+    const navButton =  {
+      visible: {
+        scaleX: [1, 0.8, 1],
+        scaleY: [1, 1.2, 1],
+        transition: {
+           duration: 1,
+           ease: "easeInOut",
+
+           delay: 0
+        }
+    }
+    };
   return (
    <header className={top ? "header" :  "header blurry"} ref={headerRef}>
     <div className='slayBanner'>
@@ -118,49 +124,14 @@ const Navbar = () => {
       </div>
     </div>
     <div className="navContainer">
-   <Link className="logoWrapper"  spy={true} smooth={true} offset={0} duration={500} to="home"> <img src="/images/logo.png" className="logo"  /> <span className="logoText"></span></Link>
+   <Link className="logoWrapper"  onClick={showNavbar}   spy={true} smooth={true} offset={0} duration={500} to="home"> <img src="/images/logo.png" className="logo"  /> <span className="logoText"></span></Link>
    <nav className='navbar' ref={navRef}>
    <motion.ul>
-    <motion.li  animate={{
-                scaleX: [1, 0.8, 1],
-                scaleY: [1, 1.2, 1],
-                transition: {
-                   duration: 1,
-                   ease: "easeInOut",
-
-                   delay: 0
-                }
-            }}  className="strong-hover-shake"><Link activeClass="active" className="page-scroll navLinks" offset={0} spy={true} smooth={true} style={{'--i':0}} duration={500} to="home">home</Link></motion.li>
-    <motion.li  animate={{
-                scaleX: [1, 0.8, 1],
-                scaleY: [1, 1.2, 1],
-                transition: {
-                   duration: 1,
-                   ease: "easeInOut",
-
-                   delay: 0
-                }
-            }} className="strong-hover-shake"><Link activeClass="active" className="page-scroll navLinks" offset={0} spy={true} smooth={true} style={{'--i':0}} duration={500} to="about">about</Link></motion.li>
-    <motion.li   animate={{
-                scaleX: [1, 0.8, 1],
-                scaleY: [1, 1.2, 1],
-                transition: {
-                   duration: 1,
-                   ease: "easeInOut",
-
-                   delay: 0
-                }
-            }} className="strong-hover-shake"><Link activeClass="active" className="page-scroll navLinks" offset={-80} spy={true} smooth={true} style={{'--i':0}} duration={500} to="howtobuy">how to buy</Link></motion.li>
-       <motion.li   animate={{
-                scaleX: [1, 0.8, 1],
-                scaleY: [1, 1.2, 1],
-                transition: {
-                   duration: 1,
-                   ease: "easeInOut",
-
-                   delay: 0
-                }
-            }} className="strong-hover-shake"><Link activeClass="active" className="page-scroll navLinks" offset={-80} spy={true} smooth={true} style={{'--i':0}} duration={500} to="tokenomics">tokenomics</Link></motion.li>
+    <motion.li variants={navButton} animate="visible" className="strong-hover-shake"><Link  onClick={showNavbar}  activeClass="active" className="page-scroll navLinks" offset={0} spy={true} smooth={true} style={{'--i':0}} duration={500} to="home">home</Link></motion.li>
+    <motion.li variants={navButton} animate="visible" className="strong-hover-shake"><Link  onClick={showNavbar}  activeClass="active" className="page-scroll navLinks" offset={0} spy={true} smooth={true} style={{'--i':0}} duration={500} to="about">about</Link></motion.li>
+    <motion.li variants={navButton} animate="visible" className="strong-hover-shake"><Link  onClick={showNavbar}  activeClass="active" className="page-scroll navLinks" offset={0} spy={true} smooth={true} style={{'--i':0}} duration={500} to="memes">memes</Link></motion.li>
+    <motion.li variants={navButton} animate="visible" className="strong-hover-shake"><Link  onClick={showNavbar}  activeClass="active" className="page-scroll navLinks" offset={-80} spy={true} smooth={true} style={{'--i':0}} duration={500} to="howtobuy">how to buy</Link></motion.li>
+    <motion.li variants={navButton} animate="visible" className="strong-hover-shake"><Link  onClick={showNavbar}  activeClass="active" className="page-scroll navLinks" offset={-80} spy={true} smooth={true} style={{'--i':0}} duration={500} to="tokenomics">tokenomics</Link></motion.li>
    
    </motion.ul>
    <ul className='navSocials'>
@@ -178,7 +149,7 @@ const Navbar = () => {
    </ul>
  
    </nav>
-   <div className="buyWagmi">
+   <div className="buySlay">
    <a href="https://jup.ag/swap/SOL-ECutGg12PNhqhkvnH1s1FcuXgCDzKDNhSf5aLtANioR7" className="button">Buy $SLAY</a>
 
    <button className='nav-btn' onClick={showNavbar}>

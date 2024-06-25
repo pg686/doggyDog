@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './components/Navbar/Navbar.jsx';
 import Home from './components/Home/Home.jsx';
 import About from './components/About/About.jsx';
-import Memes from './components/Memes/Memes.jsx';
+import MemeList from './components/Memes/MemeList.jsx';
 import Tokenomics from './components/Tokenomics/Tokenomics.jsx';
 import HowToBuy from './components/HowToBuy/HowToBuy.jsx';
 import Contacts from './components/Contacts/Contacts.jsx';
@@ -18,16 +18,12 @@ function App() {
           <div className="content">
           <div className='backgroundWrapper'>
     <Navbar />
-    
     <Home/>
-    
     <About />
-
-    <Memes />
-    <Memes />
+    <MemeList />
     <HowToBuy />
-<Tokenomics />
-<Contacts />
+    <Tokenomics />
+    <Contacts />
     </div>
     </div>
     </div>
