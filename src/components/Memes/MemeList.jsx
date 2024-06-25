@@ -5,8 +5,8 @@ const MemeList = () => {
   return (
     <div className='memes'>
       <h2 className="memeTitle">Memes</h2>
-        <Memes />
-        <Memes />
+        <Memes memesArr={['slayDog', 'slayDog2', 'slayDog', 'slayDog2','slayDog', 'slayDog2','slayDog', 'slayDog2']}/>
+        <Memes isReversed={true} memesArr={['slayDog', 'slayDog2', 'slayDog', 'slayDog2','slayDog', 'slayDog2','slayDog', 'slayDog2']} />
     </div>
   )
 }

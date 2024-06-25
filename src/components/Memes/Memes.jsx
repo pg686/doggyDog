@@ -1,66 +1,18 @@
 import React from 'react'
-const Memes = () => {
+const Memes = ({memesArr, isReversed}) => {
 
   return (
     <div>
-        <div className='wrapperSlider'>
-        <div className='slider'>
-           <div className='slide-track'>
-            <div className='slide'>
-            <img src="/images/slayDog.jpg" className="homeImg"/>
+        <div className='memeWrapper'>
+          <div className="wrapper">
+        <div className='marquee'>
+          <div className={isReversed ? "marqueeGroupReverse" : "marqueeGroup"}>
+            {memesArr.map(meme => <div className="imageGroup"><img src={`/images/${meme}.jpg`} className='sliderImg'/></div>)}
             </div>
-            <div className='slide'>
-            <img src="/images/slayDog2.jpg" className="homeImg"/>
+            <div className={isReversed ? "marqueeGroupReverse" : "marqueeGroup"}>
+            {memesArr.map(meme => <div className="imageGroup"><img src={`/images/${meme}.jpg`} className='sliderImg'/></div>)}
             </div>
-            <div className='slide'>
-            <img src="/images/slayDog.jpg" className="homeImg"/>
-            </div>
-            <div className='slide'>
-            <img src="/images/slayDog2.jpg" className="homeImg"/>
-            </div>
-            <div className='slide'>
-            <img src="/images/slayDog.jpg" className="homeImg"/>
-            </div>
-            <div className='slide'>
-            <img src="/images/slayDog2.jpg" className="homeImg"/>
-            </div>
-            <div className='slide'>
-            <img src="/images/slayDog.jpg" className="homeImg"/>
-            </div>
-            <div className='slide'>
-            <img src="/images/slayDog2.jpg" className="homeImg"/>
-            </div>
-            <div className='slide'>
-            <img src="/images/slayDog.jpg" className="homeImg"/>
-            </div>
-            <div className='slide'>
-            <img src="/images/slayDog2.jpg" className="homeImg"/>
-            </div>
-            <div className='slide'>
-            <img src="/images/slayDog.jpg" className="homeImg"/>
-            </div>
-            <div className='slide'>
-            <img src="/images/slayDog2.jpg" className="homeImg"/>
-            </div>
-            <div className='slide'>
-            <img src="/images/slayDog.jpg" className="homeImg"/>
-            </div>
-            <div className='slide'>
-            <img src="/images/slayDog2.jpg" className="homeImg"/>
-            </div>
-            <div className='slide'>
-            <img src="/images/slayDog.jpg" className="homeImg"/>
-            </div>
-            <div className='slide'>
-            <img src="/images/slayDog2.jpg" className="homeImg"/>
-            </div>
-            <div className='slide'>
-            <img src="/images/slayDog.jpg" className="homeImg"/>
-            </div>
-            <div className='slide'>
-            <img src="/images/slayDog2.jpg" className="homeImg"/>
-            </div>
-            </div>
+        </div>
         </div>
         </div>
         </div>
