@@ -7,10 +7,10 @@ const Memes = ({memesArr, isReversed}) => {
           <div className="wrapper">
         <div className='marquee'>
           <div className={isReversed ? "marqueeGroupReverse" : "marqueeGroup"}>
-            {memesArr.map(meme => <div className="imageGroup"><img src={`/images/${meme}.png`} className='sliderImg'/></div>)}
+            {memesArr.map(meme => <div className="imageGroup"><img src={`/images/${meme}.webp`} className='sliderImg'/></div>)}
             </div>
             <div className={isReversed ? "marqueeGroupReverse" : "marqueeGroup"}>
-            {memesArr.map(meme => <div className="imageGroup"><img src={`/images/${meme}.png`} className='sliderImg'/></div>)}
+            {memesArr.map(meme => <div className="imageGroup"><img src={`/images/${meme}.webp`} className='sliderImg'/></div>)}
             </div>
         </div>
         </div>
