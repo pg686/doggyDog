@@ -6,6 +6,7 @@ import MemeList from './components/Memes/MemeList.jsx';
 import Tokenomics from './components/Tokenomics/Tokenomics.jsx';
 import HowToBuy from './components/HowToBuy/HowToBuy.jsx';
 import Contacts from './components/Contacts/Contacts.jsx';
+import Roadmap from './components/Roadmap/Roadmap.jsx';
 import {useRef, useState, useEffect } from 'react';
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
     <MemeList />
     <HowToBuy />
     <Tokenomics />
+    <Roadmap /> 
     <Contacts />
     </div>
     </div>
